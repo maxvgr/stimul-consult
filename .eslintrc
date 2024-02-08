@@ -1,0 +1,36 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "plugins": [
+    "sonarjs",
+    "promise"
+  ],
+  "extends": [
+    "plugin:sonarjs/recommended",
+    "plugin:promise/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "ignorePatterns": [
+    "gulpfile.js",
+    "**/gulp_tasks/*.js",
+    "**/src/assets/scripts/libraries/*.js",
+    "**/src/assets/scripts/polyfills/*.js"
+  ],
+  "rules": {
+    "semi": [
+      "error",
+      "always"
+    ]
+  }
+}

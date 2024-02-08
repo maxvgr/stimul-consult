@@ -1,0 +1,9 @@
+.link {
+  transition: $transition ease;
+
+  @media (hover: hover) {
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
+}

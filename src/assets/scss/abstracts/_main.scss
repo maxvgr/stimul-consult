@@ -1,0 +1,13 @@
+// Подключение переменных
+@import "variables/typography";
+@import "variables/z-index";
+
+// Подключение плейсходеров
+@import "placeholders/placeholders";
+
+// Подключение функций
+@import "functions/functions";
+
+// Подключение миксинов
+@import "mixins/container";
+@import "mixins/font";
