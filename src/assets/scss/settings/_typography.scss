@@ -1,9 +1,12 @@
-$font-default: "Roboto", sans-serif; // Семейство по умолчанию
+$font-default: "Montserrat", sans-serif; // Семейство по умолчанию
+$font-second: "Manrope", sans-serif; // Семейство по умолчанию
+$font-third: "BreezeSans", sans-serif; // Семейство по умолчанию
 
 // Размеры заголовков
-$font-size__title--large: 64px;
+$font-size__title--large: 80px;
 $font-size__title--medium: 48px;
-$font-size__title--small: 36px;
+$font-size__title--regular: 36px;
+$font-size__title--small: 20px;
 
 // Размеры текста
 $font-size__text--large: 24px;

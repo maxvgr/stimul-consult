@@ -10,10 +10,14 @@
     display: grid;
     grid-template-columns: 4fr 1fr;
     gap: 32px;
+    align-items: center;
     padding-top: 15px;
   }
 
   &__left {
+    display: flex;
+    gap: 140px;
+    align-items: center;
     padding: 5px 153px 5px 15px;
     border-radius: 50px;
     background-color: $palette-white;
@@ -23,6 +27,12 @@
         display: flex;
         gap: 15px;
         align-items: center;
+        font-weight: $weight-Regular;
+        font-size: $font-size__title--small;
+        font-family: $font-third;
+        line-height: 20px;
+        letter-spacing: 0.05em;
+        white-space: nowrap;
       }
     }
   }
@@ -32,6 +42,12 @@
     padding: 20px 0;
     border-radius: 50px;
     background-color: $palette-green;
+    font-weight: $weight-Regular;
+    font-size: $font-size__text--regular;
+    font-family: $font-third;
+    line-height: 21px;
+    letter-spacing: 0.04em;
     text-align: center;
+    text-transform: uppercase;
   }
 }

@@ -3,7 +3,18 @@
 // -----------------------------------------------------------------------------
 
 
-@include font-face("Roboto", "../assets/fonts/Roboto/Roboto-Light", 300);
-@include font-face("Roboto", "../assets/fonts/Roboto/Roboto-Regular", 400);
-@include font-face("Roboto", "../assets/fonts/Roboto/Roboto-Medium", 500);
-@include font-face("Roboto", "../assets/fonts/Roboto/Roboto-Bold", 700);
+@include font-face("Manrope", "../assets/fonts/Manrope/Manrope-Light", 300);
+@include font-face("Manrope", "../assets/fonts/Manrope/Manrope-Regular", 400);
+@include font-face("Manrope", "../assets/fonts/Manrope/Manrope-Medium", 500);
+@include font-face("Manrope", "../assets/fonts/Manrope/Manrope-Bold", 700);
+
+@include font-face("Montserrat", "../assets/fonts/Montserrat/Montserrat-Light", 300);
+@include font-face("Montserrat", "../assets/fonts/Montserrat/Montserrat-Regular", 400);
+@include font-face("Montserrat", "../assets/fonts/Montserrat/Montserrat-Medium", 500);
+@include font-face("Montserrat", "../assets/fonts/Montserrat/Montserrat-Bold", 700);
+
+@include font-face("BreezeSans", "../assets/fonts/BreezeSans/BreezeSans-Light", 300);
+@include font-face("BreezeSans", "../assets/fonts/BreezeSans/BreezeSans-Regular", 400);
+@include font-face("BreezeSans", "../assets/fonts/BreezeSans/BreezeSans-Medium", 500);
+@include font-face("BreezeSans", "../assets/fonts/BreezeSans/BreezeSans-Bold", 700);
+

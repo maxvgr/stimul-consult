@@ -1,9 +1,17 @@
 .nav--header {
   .nav {
     &__list {
+      display: flex;
+      gap: 80px;
     }
 
     &__item {
+      font-weight: $weight-Medium;
+      font-size: $font-size__text--regular;
+      line-height: $font-size__text--regular;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      white-space: nowrap;
     }
 
     &__link {
