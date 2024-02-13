@@ -1,0 +1,68 @@
+.task {
+  margin-bottom: 130px;
+
+  &-wrapper {
+    display: flex;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    padding-right: 250px;
+
+    &-title {
+      font-weight: $weight-Regular;
+      font-size: $font-size__title--medium;
+      font-family: $font-second;
+      line-height: 53px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+
+      span {
+        font-weight: $weight-Bold;
+      }
+    }
+
+    img {
+      border-radius: 30px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 50%;
+
+    &-item {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+
+      picture {
+        width: 20%;
+      }
+
+
+      &--text {
+        width: 80%;
+        font-weight: $weight-Regular;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: 0;
+
+        .title {
+          padding-bottom: 20px;
+          font-weight: $weight-Bold;
+          font-size: 32px;
+          font-family: $font-second;
+          line-height: 35px;
+          letter-spacing: 0.02em;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

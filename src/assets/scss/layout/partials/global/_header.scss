@@ -3,10 +3,17 @@
 // -----------------------------------------------------------------------------
 
 #header {
+  // .container {
+  //   max-width: 100%;
+  // }
 }
 
 .header {
   &__wrapper {
+    @include breakpoint($breakpoint-tablet) {
+      grid-template-columns: 1fr;
+    }
+
     display: grid;
     grid-template-columns: 4fr 1fr;
     gap: 32px;
@@ -15,6 +22,12 @@
   }
 
   &__left {
+    @include breakpoint($breakpoint-tablet) {
+      padding: 5px 15px 5px 15px;
+      gap: 10px;
+      justify-content: space-between;
+    }
+
     display: flex;
     gap: 140px;
     align-items: center;
@@ -23,6 +36,10 @@
     background-color: $palette-white;
 
     &-logo {
+      @include breakpoint($breakpoint-tablet) {
+        width: 80%;
+      }
+
       a {
         display: flex;
         gap: 15px;
@@ -35,9 +52,43 @@
         white-space: nowrap;
       }
     }
+
+    &-menu {
+      @include breakpoint($breakpoint-tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__burger {
+    @include breakpoint($breakpoint-tablet) {
+      display: block;
+    }
+
+    display: none;
+    padding: 10px;
+    border-radius: 100px;
+    background: $palette-green;
+  }
+
+  &__feedback {
+    @include breakpoint($breakpoint-tablet) {
+      display: block;
+    }
+
+    display: none;
+
+    .feedback {
+      border: none;
+      background: none;
+    }
   }
 
   &__right {
+    @include breakpoint($breakpoint-tablet) {
+      display: none;
+    }
+
     display: block;
     padding: 20px 0;
     border-radius: 50px;
