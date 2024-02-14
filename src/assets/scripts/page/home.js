@@ -29,10 +29,10 @@ new Swiper("#home-hero .swiper", {
   // speed: 2000,
   // simulateTouch: false,
 
-  // autoplay: {
-  //   delay: 5000,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
 
   // effect: "fade",
   // fadeEffect: {
