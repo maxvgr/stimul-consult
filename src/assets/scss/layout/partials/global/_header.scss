@@ -100,5 +100,10 @@
     letter-spacing: 0.04em;
     text-align: center;
     text-transform: uppercase;
+    transition: $transition-time ease;
+
+    &:hover {
+      color: $color-text__white;
+    }
   }
 }

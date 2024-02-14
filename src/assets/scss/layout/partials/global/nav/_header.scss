@@ -12,6 +12,11 @@
       letter-spacing: 0;
       text-transform: uppercase;
       white-space: nowrap;
+      transition: $transition-time ease;
+
+      &:hover {
+        color: $palette-green;
+      }
     }
 
     &__link {
