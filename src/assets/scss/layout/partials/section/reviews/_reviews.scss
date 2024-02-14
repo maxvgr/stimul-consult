@@ -49,14 +49,16 @@
   }
 
   &__card-wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    display: flex;
+    gap: 20px;
   }
 
   &__card {
-    margin-bottom: 50px;
+    width: 755px !important;
     height: 565px;
+    margin-bottom: 50px;
     overflow: hidden;
     background-image: url("data:image/svg+xml,%3Csvg width='772' height='565' viewBox='0 0 772 565' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 30C0 13.4315 13.4315 0 30 0H373.788C381.617 0 389.137 3.06077 394.74 8.5288L417.26 30.504C422.863 35.972 430.383 39.0328 438.212 39.0328H742C758.569 39.0328 772 52.4643 772 69.0328V535C772 551.569 758.569 565 742 565H30C13.4314 565 0 551.569 0 535V30Z' fill='%2389939C'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
@@ -74,10 +76,10 @@
     }
 
     &-info {
-      height: 500px;
       display: flex;
-      gap: 30px;
       justify-content: space-between;
+      gap: 30px;
+      height: 445px;
       padding: 27px 50px;
       border-radius: 30px;
       background-color: $palette-white;
@@ -122,6 +124,7 @@
       }
 
       img.review {
+        height: auto;
         border-radius: 20px;
         box-shadow: 5px 4px 30px 0 #00000026;
       }
