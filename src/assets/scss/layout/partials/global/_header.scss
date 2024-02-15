@@ -3,14 +3,20 @@
 // -----------------------------------------------------------------------------
 
 #header {
-  // .container {
-  //   max-width: 100%;
-  // }
+  .container {
+    @include breakpoint($breakpoint-laptop) {
+      max-width: 100%;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      min-width: 350px;
+      padding: 0 5px;
+    }
+  }
 }
 
 .header {
   &__wrapper {
-    @include breakpoint($breakpoint-tablet) {
+    @include breakpoint($breakpoint-notebook) {
       grid-template-columns: 1fr;
     }
 
@@ -22,25 +28,37 @@
   }
 
   &__left {
-    @include breakpoint($breakpoint-tablet) {
-      padding: 5px 15px 5px 15px;
+    @include breakpoint($breakpoint-notebook) {
       gap: 10px;
+      padding: 5px 15px 5px 15px;
       justify-content: space-between;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      gap: 0;
     }
 
     display: flex;
     gap: 140px;
     align-items: center;
-    padding: 5px 153px 5px 15px;
+    padding: 5px 50px 5px 15px;
     border-radius: 50px;
     background-color: $palette-white;
 
     &-logo {
-      @include breakpoint($breakpoint-tablet) {
+      @include breakpoint($breakpoint-notebook) {
+        width: 90%;
+      }
+      @include breakpoint($breakpoint-mobile) {
         width: 80%;
+        font-size: 12px;
       }
 
       a {
+        @include breakpoint($breakpoint-mobile) {
+          font-size: 12px;
+          line-height: 12px;
+        }
+
         display: flex;
         gap: 15px;
         align-items: center;
@@ -54,15 +72,23 @@
     }
 
     &-menu {
-      @include breakpoint($breakpoint-tablet) {
+      @include breakpoint($breakpoint-notebook) {
         display: none;
       }
     }
   }
 
   &__burger {
-    @include breakpoint($breakpoint-tablet) {
+    @include breakpoint($breakpoint-notebook) {
       display: block;
+    }
+
+    .hamburger-inner::before {
+      top: -9px;
+    }
+
+    .hamburger-inner::after {
+      bottom: -9px;
     }
 
     display: none;
@@ -72,8 +98,9 @@
   }
 
   &__feedback {
-    @include breakpoint($breakpoint-tablet) {
+    @include breakpoint($breakpoint-notebook) {
       display: block;
+      width: 56px !important;
     }
 
     display: none;
@@ -82,10 +109,16 @@
       border: none;
       background: none;
     }
+
+    .header__right-phone {
+      max-width: inherit;
+      margin-top: 3px;
+      margin-bottom: -3px;
+    }
   }
 
   &__right {
-    @include breakpoint($breakpoint-tablet) {
+    @include breakpoint($breakpoint-notebook) {
       display: none;
     }
 

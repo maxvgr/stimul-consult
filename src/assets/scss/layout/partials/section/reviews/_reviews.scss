@@ -1,5 +1,9 @@
 .reviews {
   &__title-wrap {
+    @include breakpoint($breakpoint-notebook) {
+      grid-template-columns: 1fr;
+    }
+
     display: grid;
     grid-template-columns: 2fr 1fr;
     margin-bottom: 70px;
@@ -46,6 +50,15 @@
       background-repeat: no-repeat;
       transition: $transition-time ease;
     }
+  }
+
+  .swiper {
+    @include breakpoint($breakpoint-tablet) {
+      transform: scale(0.8);
+    }
+    // @include breakpoint($breakpoint-mobile) {
+    //   transform: scale(0.6);
+    // }
   }
 
   &__card-wrap {

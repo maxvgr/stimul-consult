@@ -5,11 +5,20 @@
 #footer {
   .container {
     max-width: 100%;
-    padding: 0 16px 0 0;
+    padding: 0;
   }
 }
 
 .footer {
+  @include breakpoint($breakpoint-notebook) {
+    position: relative;
+    grid-template-columns: 1fr;
+    padding: 50px 20px 90px;
+  }
+  @include breakpoint($breakpoint-mobile) {
+    padding: 50px 20px 40px;
+  }
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 130px;
@@ -23,22 +32,50 @@
   color: $color-text__white;
 
   // $color-text__primary;
+  justify-self: start;
 
   &__left {
-    &-logo a {
-      display: flex;
-      gap: 23px;
+    @include breakpoint($breakpoint-notebook) {
+      display: grid;
       align-items: center;
-      color: $color-text__white;
-      font-weight: $weight-Regular;
-      font-size: 26px;
-      font-family: $font-third;
-      line-height: 22px;
-      letter-spacing: 0.05em;
-      white-space: nowrap;
+      justify-content: space-between;
+    }
+
+    &-logo {
+      @include breakpoint($breakpoint-notebook) {
+        display: flex;
+        grid-column: 1 / 3;
+        justify-content: center;
+      }
+
+      a {
+        @include breakpoint($breakpoint-mobile) {
+          font-size: 20px;
+        }
+
+        display: flex;
+        gap: 23px;
+        align-items: center;
+        color: $color-text__white;
+        font-weight: $weight-Regular;
+        font-size: 26px;
+        font-family: $font-third;
+        line-height: 22px;
+        letter-spacing: 0.05em;
+        white-space: nowrap;
+      }
     }
 
     &-info {
+      @include breakpoint($breakpoint-notebook) {
+        margin-top: 80px;
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+      }
+      @include breakpoint($breakpoint-mobile) {
+        margin-top: 0;
+      }
+
       padding-top: 50px;
       color: $color-text__white;
       font-weight: $weight-Regular;
@@ -61,6 +98,16 @@
     }
 
     &-social {
+      @include breakpoint($breakpoint-notebook) {
+        flex-direction: column;
+        margin-top: 130px;
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+      }
+      @include breakpoint($breakpoint-mobile) {
+        margin-top: 50px;
+      }
+
       display: flex;
       gap: 21px;
       margin-top: 40px;
@@ -71,10 +118,32 @@
     padding-top: 25px;
 
     .nav__list {
+      @include breakpoint($breakpoint-notebook) {
+        position: absolute;
+        right: 20px;
+        left: 20px;
+        margin-top: -350px;
+      }
+      @include breakpoint($breakpoint-mobile) {
+        position: relative;
+        right: unset;
+        left: unset;
+        flex-wrap: wrap;
+        margin-top: 0;
+        padding-top: 30px;
+        border-top: 1px solid #89939c;
+      }
+
       display: flex;
       justify-content: space-between;
 
       li {
+        @include breakpoint($breakpoint-mobile) {
+          width: 50%;
+          padding: 15px 0;
+          text-align: center;
+        }
+
         font-weight: 500;
         font-size: 16px;
         font-family: $font-second;
@@ -89,12 +158,22 @@
     }
 
     &-contactus {
+      @include breakpoint($breakpoint-mobile) {
+        grid-template-columns: 1fr;
+        justify-items: center;
+      }
+
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10px;
       margin-top: 75px;
 
       &--title {
+        @include breakpoint($breakpoint-mobile) {
+          grid-column: 1/2;
+          grid-row: 1/2;
+        }
+
         font-weight: $weight-Bold;
         font-size: 32px;
         font-family: $font-second;
@@ -103,6 +182,13 @@
       }
 
       &--text {
+        @include breakpoint($breakpoint-mobile) {
+          grid-column: 1/2;
+          grid-row: 2/3;
+          justify-self: center;
+          text-align: center;
+        }
+
         justify-self: end;
         font-weight: $weight-Regular;
         font-size: 18px;
@@ -111,11 +197,22 @@
       }
 
       &--form {
+        @include breakpoint($breakpoint-mobile) {
+          grid-column: 1 / 2;
+          grid-row: 3/4;
+          width: 100%;
+        }
+
         grid-column: 1 /3;
         margin-top: 16px;
         margin-bottom: 63px;
 
         .contactusform {
+          @include breakpoint($breakpoint-mobile) {
+            padding: 28px 26px;
+          }
+
+          position: relative;
           display: flex;
           align-items: center;
           justify-content: space-between;
@@ -124,6 +221,10 @@
           background-color: $palette-white;
 
           input[type="tel"] {
+            @include breakpoint($breakpoint-mobile) {
+              margin: 0 auto;
+            }
+
             border: none;
             color: $palette-togrey;
             font-weight: $weight-Regular;
@@ -137,6 +238,13 @@
           }
 
           input[type="submit"] {
+            @include breakpoint($breakpoint-mobile) {
+              position: absolute;
+              top: 100px;
+              right: 0;
+              left: 0;
+            }
+
             padding: 28px 50px;
             border: none;
             border-radius: 50px;
@@ -159,6 +267,12 @@
     }
 
     &-bottom {
+      @include breakpoint($breakpoint-mobile) {
+        grid-template-columns: 1fr;
+        margin-top: 70px;
+        justify-items: center;
+      }
+
       display: grid;
       grid-template-columns: 1fr 1fr;
       color: $color-text__grey;
@@ -170,6 +284,11 @@
       text-transform: uppercase;
 
       &--artfactor {
+        @include breakpoint($breakpoint-mobile) {
+          justify-self: center;
+          margin-top: 40px;
+        }
+
         justify-self: end;
 
         a {

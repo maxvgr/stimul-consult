@@ -2,10 +2,23 @@
   margin-bottom: 130px;
 
   &-wrapper {
+    @include breakpoint($breakpoint-notebook) {
+      flex-direction: column;
+    }
+
     display: flex;
   }
 
   &__left {
+    @include breakpoint($breakpoint-laptop) {
+      width: 30%;
+    }
+    @include breakpoint($breakpoint-notebook) {
+      width: 100%;
+      margin-bottom: 50px;
+      padding-right: 0;
+    }
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -26,17 +39,32 @@
     }
 
     img {
+      @include breakpoint($breakpoint-laptop) {
+        display: none;
+      }
+
       border-radius: 30px;
     }
   }
 
   &__right {
+    @include breakpoint($breakpoint-laptop) {
+      width: 70%;
+    }
+    @include breakpoint($breakpoint-notebook) {
+      width: 100%;
+    }
+
     display: flex;
     flex-direction: column;
     gap: 60px;
     width: 50%;
 
     &-item {
+      @include breakpoint($breakpoint-notebook) {
+        align-items: flex-start;
+      }
+
       display: flex;
       gap: 32px;
       align-items: center;
@@ -44,7 +72,6 @@
       picture {
         width: 20%;
       }
-
 
       &--text {
         width: 80%;

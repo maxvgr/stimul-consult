@@ -22,9 +22,17 @@ export const hero = document.querySelector("#home-hero");
 new Swiper("#home-hero .swiper", {
   modules: [Navigation, Pagination, EffectFade, Autoplay],
 
-  slidesPerView: 2,
+  slidesPerView: 1,
   spaceBetween: 0,
   loop: true,
+
+  breakpoints: {
+
+    1400: {
+      slidesPerView: 2,
+      spaceBetween: 0
+    }
+  },
 
   // speed: 2000,
   // simulateTouch: false,
@@ -50,18 +58,5 @@ new Swiper("#home-hero .swiper", {
     clickable: true,
   },
 
-  // on: {
-  //   slideChangeTransitionStart: function (instance) {
-  //     for (const video of heroVideos) {
-  //       video.pause();
-  //     }
 
-  //     const activeIndex = instance.activeIndex;
-  //     const activeSlide = instance.slides[activeIndex];
-  //     const activeSlideVideo = activeSlide.querySelectorAll("video")[0];
-  //     if (activeSlideVideo) {
-  //       activeSlideVideo.play();
-  //     }
-  //   },
-  // },
 });
