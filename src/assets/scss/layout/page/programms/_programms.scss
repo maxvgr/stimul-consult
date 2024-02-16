@@ -1,0 +1,210 @@
+#proramms-page {
+  .container {
+    @include breakpoint($breakpoint-notebook) {
+      max-width: 80%;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      max-width: 100%;
+    }
+
+  }
+}
+
+.programms {
+  &__title {
+    @include breakpoint($breakpoint-notebook) {
+      font-size: 62px;
+      line-height: 68px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      font-size: 48px;
+      line-height: 52px;
+    }
+
+    padding-top: 77px;
+    font-weight: 600;
+    font-size: $font-size__title--large;
+    font-family: $font-second;
+    line-height: 88px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  &__wrapper {
+    @include breakpoint($breakpoint-notebook) {
+      grid-template-columns: 1fr;
+      margin-top: 70px;
+      padding-bottom: 250px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      margin-top: 50px;
+    }
+
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 100px;
+  }
+
+  &__info {
+    font-weight: $weight-Regular;
+    font-size: 18px;
+    line-height: 27px;
+
+    &-title {
+      @include breakpoint($breakpoint-tablet) {
+        font-size: 40px;
+        line-height: 44px;
+      }
+      @include breakpoint($breakpoint-mobile) {
+        font-size: 26px;
+        line-height: 28px;
+      }
+
+      padding-bottom: 35px;
+      font-weight: $weight-Regular;
+      font-size: 48px;
+      font-family: $font-second;
+      line-height: 52px;
+
+      span {
+        display: block;
+        color: $palette-green;
+        font-weight: $weight-Bold;
+      }
+    }
+  }
+
+  &__buttons {
+    @include breakpoint($breakpoint-notebook) {
+      position: absolute;
+      bottom: 0;
+    }
+
+    display: block;
+    padding: 50px 0;
+
+    &-decisions {
+      @include breakpoint($breakpoint-notebook) {
+        width: 100%;
+      }
+
+      display: inline-flex;
+      justify-content: center;
+      width: 80%;
+      padding: 20px 50px;
+      font-weight: $weight-Regular;
+      font-size: 16px;
+      font-family: $font-second;
+      line-height: 21px;
+      letter-spacing: 0.04em;
+      border-radius: 50px;
+      background: rgba(92, 228, 145, 1);
+      transition: $transition-time ease;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $color-text__white;
+        // background: linear-gradient(135deg, #96e856 0%, #26e1c7 100%);
+      }
+
+      &::before {
+        content: "";
+        position: relative;
+        width: 19px;
+        height: 23px;
+        margin-right: 10px;
+        background-image: url("data:image/svg+xml,%3Csvg width='21' height='25' viewBox='0 0 21 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.4999 12.5V20.1667M10.4999 20.1667L14.5712 17.6111M10.4999 20.1667L6.4285 17.6111M11.857 1.00111C11.7274 1 11.5819 1 11.4155 1H5.34306C3.82294 1 3.06231 1 2.4817 1.27854C1.97099 1.52355 1.55606 1.91422 1.29584 2.39507C1 2.94174 1 3.65789 1 5.08914V19.9114C1 21.3426 1 22.0579 1.29584 22.6045C1.55606 23.0854 1.97099 23.4767 2.4817 23.7217C3.06175 24 3.82145 24 5.33861 24H15.6611C17.1783 24 17.9369 24 18.5169 23.7217C19.0277 23.4767 19.444 23.0854 19.7042 22.6045C19.9997 22.0584 19.9997 21.3441 19.9997 19.9157V9.08282C19.9997 8.92601 19.9997 8.78883 19.9985 8.66667M11.857 1.00111C12.2446 1.00443 12.4899 1.01769 12.724 1.07061C13.0009 1.13321 13.2655 1.23673 13.5083 1.37684C13.7822 1.53483 14.0173 1.75621 14.4864 2.19792L18.7281 6.19159C19.1975 6.63358 19.4309 6.85396 19.5988 7.11186C19.7476 7.34051 19.8577 7.58983 19.9242 7.85059C19.9804 8.07091 19.9948 8.30187 19.9985 8.66667M11.857 1.00111V4.57778C11.857 6.00902 11.857 6.72415 12.1528 7.27081C12.4131 7.75167 12.828 8.14339 13.3387 8.3884C13.9187 8.66667 14.6784 8.66667 16.1956 8.66667H19.9985M19.9985 8.66667H20' stroke='%23363639' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        transition: $transition-time ease;
+      }
+    }
+
+    &-reviews {
+      @include breakpoint($breakpoint-notebook) {
+        width: 100%;
+      }
+
+      display: inline-flex;
+      justify-content: center;
+      width: 80%;
+      margin-top: 32px;
+      padding: 20px 50px;
+      border: 2px solid rgba(54, 54, 57, 1);
+      border-radius: 50px;
+      font-weight: $weight-Regular;
+      font-size: 16px;
+      font-family: $font-second;
+      line-height: 21px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+
+      &:hover {
+        // color: $palette-green;
+      }
+    }
+  }
+
+  &__card-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__card {
+    @include breakpoint($breakpoint-mobile) {
+      flex-direction: column-reverse;
+      align-items: flex-end;
+      padding-bottom: 20px;
+      padding-left: 20px;
+
+      picture {
+        width: 80%;
+      }
+    }
+
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    padding-left: 50px;
+    border-radius: 30px;
+    background-color: $palette-white;
+
+    &-title {
+      @include breakpoint($breakpoint-mobile) {
+        padding-top: 0;
+      }
+
+      padding-top: 50px;
+      font-weight: 600;
+      font-size: 32px;
+      font-family: $font-second;
+      line-height: 35px;
+      letter-spacing: 0.01em;
+    }
+
+    &-text {
+      padding-top: 25px;
+
+      ul {
+        @include breakpoint($breakpoint-mobile) {
+          padding-left: 20px;
+        }
+
+        list-style-type: disc;
+
+        li {
+          padding-bottom: 10px;
+          color: $palette-green;
+
+          span {
+            color: $color-text__primary;
+          }
+        }
+      }
+    }
+  }
+}

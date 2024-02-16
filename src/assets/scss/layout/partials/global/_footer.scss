@@ -15,8 +15,10 @@
     grid-template-columns: 1fr;
     padding: 50px 20px 90px;
   }
-  @include breakpoint($breakpoint-mobile) {
+  @include breakpoint($breakpoint-tablet) {
     margin-top: 0px;
+  }
+  @include breakpoint($breakpoint-mobile) {
     padding: 50px 20px 40px;
   }
 
