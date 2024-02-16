@@ -18,6 +18,9 @@
       margin-bottom: 50px;
       padding-right: 0;
     }
+    @include breakpoint($breakpoint-mobile) {
+      margin-bottom: 10px;
+    }
 
     display: flex;
     flex-direction: column;
@@ -26,6 +29,12 @@
     padding-right: 250px;
 
     &-title {
+      @include breakpoint($breakpoint-mobile) {
+        margin-bottom: 30px;
+        font-size: 26px;
+        line-height: 28px;
+      }
+
       font-weight: $weight-Regular;
       font-size: $font-size__title--medium;
       font-family: $font-second;
@@ -42,6 +51,9 @@
       @include breakpoint($breakpoint-laptop) {
         display: none;
       }
+      @include breakpoint($breakpoint-mobile) {
+        display: block;
+      }
 
       border-radius: 30px;
     }
@@ -54,6 +66,9 @@
     @include breakpoint($breakpoint-notebook) {
       width: 100%;
     }
+    @include breakpoint($breakpoint-mobile) {
+      gap: 10px;
+    }
 
     display: flex;
     flex-direction: column;
@@ -63,6 +78,11 @@
     &-item {
       @include breakpoint($breakpoint-notebook) {
         align-items: flex-start;
+      }
+      @include breakpoint($breakpoint-mobile) {
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
       }
 
       display: flex;
@@ -74,6 +94,12 @@
       }
 
       &--text {
+        @include breakpoint($breakpoint-mobile) {
+          font-size: 16px;
+          line-height: 22px;
+          text-align: center;
+        }
+
         width: 80%;
         font-weight: $weight-Regular;
         font-size: 18px;
@@ -81,6 +107,10 @@
         letter-spacing: 0;
 
         .title {
+          @include breakpoint($breakpoint-mobile) {
+            font-size: 20px;
+            line-height: 22px;
+          }
           padding-bottom: 20px;
           font-weight: $weight-Bold;
           font-size: 32px;

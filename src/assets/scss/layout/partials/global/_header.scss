@@ -30,8 +30,8 @@
   &__left {
     @include breakpoint($breakpoint-notebook) {
       gap: 10px;
-      padding: 5px 15px 5px 15px;
       justify-content: space-between;
+      padding: 5px 15px;
     }
     @include breakpoint($breakpoint-mobile) {
       gap: 0;
@@ -83,6 +83,11 @@
       display: block;
     }
 
+    display: none;
+    padding: 10px;
+    border-radius: 100px;
+    background: $palette-green;
+
     .hamburger-inner::before {
       top: -9px;
     }
@@ -90,11 +95,6 @@
     .hamburger-inner::after {
       bottom: -9px;
     }
-
-    display: none;
-    padding: 10px;
-    border-radius: 100px;
-    background: $palette-green;
   }
 
   &__feedback {

@@ -3,6 +3,9 @@
     @include breakpoint($breakpoint-notebook) {
       grid-template-columns: 1fr;
     }
+    @include breakpoint($breakpoint-mobile) {
+      margin-bottom: -80px;
+    }
 
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -10,6 +13,11 @@
   }
 
   &__title {
+    @include breakpoint($breakpoint-mobile) {
+      font-size: 26px;
+      line-height: 28px;
+    }
+
     font-weight: $weight-Bold;
     font-size: $font-size__title--medium;
     font-family: $font-second;
@@ -23,6 +31,10 @@
   }
 
   &__all {
+    @include breakpoint($breakpoint-mobile) {
+      display: none;
+    }
+
     display: inline-flex;
     gap: 20px;
     align-items: center;
@@ -34,6 +46,7 @@
     letter-spacing: 0.02em;
 
     &:hover::after {
+      background-color: linear-gradient(135deg, #96e856 0%, #26e1c7 100%);
       transform: translateX(8px);
     }
 
@@ -56,29 +69,52 @@
     @include breakpoint($breakpoint-tablet) {
       transform: scale(0.8);
     }
-    // @include breakpoint($breakpoint-mobile) {
-    //   transform: scale(0.6);
-    // }
+
+    .reviewall {
+      @include breakpoint($breakpoint-mobile) {
+        right: 0;
+        left: 0;
+        display: inline-flex;
+      }
+
+      bottom: 0;
+      display: none;
+    }
   }
 
   &__card-wrap {
-    // display: grid;
-    // grid-template-columns: 1fr 1fr;
     display: flex;
     gap: 20px;
   }
 
   &__card {
+    @include breakpoint($breakpoint-mobile) {
+      width: 328px !important;
+      height: auto;
+      background-image: url("../assets/img/layout/section/reviews/bg-mobile.png");
+      background-position: top;
+    }
+
+    overflow: hidden;
     width: 755px !important;
     height: 565px;
     margin-bottom: 50px;
-    overflow: hidden;
     background-image: url("data:image/svg+xml,%3Csvg width='772' height='565' viewBox='0 0 772 565' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 30C0 13.4315 13.4315 0 30 0H373.788C381.617 0 389.137 3.06077 394.74 8.5288L417.26 30.504C422.863 35.972 430.383 39.0328 438.212 39.0328H742C758.569 39.0328 772 52.4643 772 69.0328V535C772 551.569 758.569 565 742 565H30C13.4314 565 0 551.569 0 535V30Z' fill='%2389939C'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
+    background-repeat: no-repeat;
 
     &-title {
+      @include breakpoint($breakpoint-mobile) {
+        overflow: hidden;
+        width: 220px;
+        padding: 15px 0 15px 15px;
+        font-size: 16px;
+        line-height: 18px;
+      }
+
+      overflow: hidden;
+      width: 330px;
       padding: 20px 10px 20px 50px;
       color: $color-text__white;
       font-weight: $weight-Bold;
@@ -89,6 +125,13 @@
     }
 
     &-info {
+      @include breakpoint($breakpoint-mobile) {
+        flex-direction: column-reverse;
+        height: auto;
+        padding: 15px;
+        border-radius: 0 0 30px 30px;
+      }
+
       display: flex;
       justify-content: space-between;
       gap: 30px;
@@ -98,6 +141,10 @@
       background-color: $palette-white;
 
       &--left {
+        @include breakpoint($breakpoint-mobile) {
+          width: 100%;
+        }
+
         width: 50%;
 
         .title {

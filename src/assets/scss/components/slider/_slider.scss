@@ -1,9 +1,17 @@
 #home-hero {
   .swiper {
+    @include breakpoint($breakpoint-mobile) {
+      padding-bottom: 180px;
+    }
+
     padding-bottom: 50px;
 
     &-button-prev,
     &-button-next {
+      @include breakpoint($breakpoint-mobile) {
+        bottom: 100px;
+      }
+
       top: unset;
       bottom: 0;
       width: 64px;
@@ -29,6 +37,10 @@
   }
 
   .swiper-pagination {
+    @include breakpoint($breakpoint-mobile) {
+      bottom: 120px;
+    }
+
     bottom: 20px;
 
     &-bullet {
