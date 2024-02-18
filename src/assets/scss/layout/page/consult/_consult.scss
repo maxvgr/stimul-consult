@@ -1,21 +1,34 @@
-// #consult-page {
-//   .container {
-//     @include breakpoint($breakpoint-notebook) {
-//       max-width: 80%;
-//     }
-//     @include breakpoint($breakpoint-tablet) {
-//       max-width: 100%;
-//     }
-
-//   }
-// }
+#consult-page {
+  .container {
+    @include breakpoint($breakpoint-notebook) {
+      max-width: 90%;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      max-width: 100%;
+    }
+  }
+}
 
 .consult {
   &__title {
+    @include breakpoint($breakpoint-notebook) {
+      margin-top: 60px;
+      margin-bottom: 70px;
+    }
+
     margin-top: 77px;
     margin-bottom: 100px;
 
     h1 {
+      @include breakpoint($breakpoint-notebook) {
+        font-size: 62px;
+        line-height: 68px;
+      }
+      @include breakpoint($breakpoint-tablet) {
+        font-size: 30px;
+        line-height: 33px;
+      }
+
       font-weight: 600;
       font-size: $font-size__title--large;
       font-family: $font-second;
@@ -24,17 +37,29 @@
     }
   }
 
-  &__tofiz,
-  &__toorg {
+  &__tofiz {
+    @include breakpoint($breakpoint-notebook) {
+      flex-direction: column-reverse;
+    }
+
     position: relative;
     display: flex;
+    align-items: flex-end;
     justify-content: space-between;
     border-radius: 50px;
     background-color: $palette-white;
-    // height: 432px;
-    // overflow: visible;
 
     &-text {
+      @include breakpoint($breakpoint-notebook) {
+        width: 100%;
+        padding: 50px;
+      }
+      @include breakpoint($breakpoint-mobile) {
+        padding: 20px;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
       width: 60%;
       padding: 50px 100px 50px 50px;
       font-weight: $weight-Regular;
@@ -42,6 +67,11 @@
       line-height: 31px;
 
       &--title {
+        @include breakpoint($breakpoint-mobile) {
+          font-size: 20px;
+          line-height: 22px;
+        }
+
         padding-bottom: 25px;
         font-weight: 600;
         font-size: 32px;
@@ -69,34 +99,220 @@
     }
 
     &-img {
+      @include breakpoint($breakpoint-notebook) {
+        width: 100%;
+      }
+      @include breakpoint($breakpoint-mobile) {
+        margin-bottom: 40px;
+      }
+
+      position: relative;
       border-radius: 50px;
       background: rgba(222, 222, 222, 1);
 
       picture {
+        @include breakpoint($breakpoint-mobile) {
+          margin-top: -40px;
+        }
+
         margin-top: -85px;
+      }
+
+      &--up {
+        @include breakpoint($breakpoint-mobile) {
+          top: -100px;
+          width: 40%;
+        }
+        @include breakpoint($breakpoint-mobilemini) {
+          top: -70px;
+        }
+
+        position: absolute;
+        top: -150px;
+        right: 0;
+
+        &.animation {
+          @keyframes ani {
+            0% {
+              transform: translateY(-150%);
+            }
+
+            100% {
+              transform: translateY(0);
+            }
+          }
+
+          transform: translateY(-150%);
+          animation: ani 2s forwards;
+        }
+      }
+
+      &--middle {
+        @include breakpoint($breakpoint-mobile) {
+          width: 40%;
+        }
+        @include breakpoint($breakpoint-mobilemini) {
+          right: -20px;
+        }
+
+        position: absolute;
+        top: 30%;
+        right: -50px;
+
+        &.animation {
+          @keyframes ani1 {
+            0% {
+              transform: translateX(-150%);
+            }
+
+            100% {
+              transform: translateY(0);
+            }
+          }
+
+          transform: translateX(-150%);
+          animation: ani1 2s forwards;
+        }
+      }
+
+      &--bottom {
+        @include breakpoint($breakpoint-mobile) {
+          bottom: -100px;
+          width: 40%;
+        }
+        @include breakpoint($breakpoint-mobilemini) {
+          bottom: -60px;
+        }
+
+        position: absolute;
+        bottom: -130px;
+
+        &.animation {
+          @keyframes ani2 {
+            0% {
+              transform: translateY(150%);
+            }
+
+            100% {
+              transform: translateY(0);
+            }
+          }
+
+          transform: translateY(150%);
+          animation: ani2 2s forwards;
+        }
       }
     }
   }
 
   &__toorg {
+    @include breakpoint($breakpoint-laptop) {
+      height: auto;
+    }
+    @include breakpoint($breakpoint-notebook) {
+      flex-direction: column;
+      width: 100%;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      margin-top: 170px;
+    }
+
+    display: flex;
     align-items: flex-end;
-    height: 346px;
+    justify-content: space-between;
+    height: 347px;
     margin-top: 130px;
+    border-radius: 50px;
+    background-color: $palette-white;
 
     &-text {
+      @include breakpoint($breakpoint-notebook) {
+        width: 100%;
+        padding: 50px;
+      }
+      @include breakpoint($breakpoint-mobile) {
+        padding: 20px;
+      }
+
+      width: 60%;
       padding: 50px 50px 50px 100px;
+
+      ul {
+        @include breakpoint($breakpoint-mobile) {
+          padding-left: 20px;
+        }
+
+        list-style-type: disc;
+
+        li {
+          padding-bottom: 10px;
+          color: $palette-green;
+
+          span {
+            color: $color-text__primary;
+          }
+        }
+      }
     }
 
     &-img {
-      background: none;
+      @include breakpoint($breakpoint-notebook) {
+        width: 100%;
+      }
+
+      position: relative;
 
       picture {
+        @include breakpoint($breakpoint-notebook) {
+          margin-top: -187px;
+        }
+
         margin-top: -107px;
+      }
+
+      &--down {
+        @include breakpoint($breakpoint-mobile) {
+          bottom: -100px;
+          width: 40%;
+        }
+        @include breakpoint($breakpoint-mobilemini) {
+          bottom: -80px;
+        }
+
+        position: absolute;
+        right: 0;
+        bottom: -150px;
+
+        &.animation {
+          @keyframes ani3 {
+            0% {
+              transform: translateY(150%);
+            }
+
+            100% {
+              transform: translateY(0);
+            }
+          }
+
+          transform: translateY(150%);
+          animation: ani3 2s forwards;
+        }
       }
     }
   }
 
   &__format-title {
+    @include breakpoint($breakpoint-tablet) {
+      margin-top: 100px;
+      font-size: 40px;
+      line-height: 44px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      margin-top: 100px;
+      font-size: 30px;
+      line-height: 33px;
+    }
+
     margin-top: 130px;
     margin-bottom: 70px;
     font-weight: $weight-Regular;
@@ -114,17 +330,30 @@
   }
 
   &__format-wrapper {
+    @include breakpoint($breakpoint-notebook) {
+      grid-template-columns: 1fr;
+    }
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 32px;
   }
 
   &__format-card {
+    @include breakpoint($breakpoint-mobile) {
+      padding: 20px;
+    }
+
     padding: 50px;
     border-radius: 30px;
     background: $palette-white;
 
     &--title {
+      @include breakpoint($breakpoint-mobile) {
+        font-size: 20px;
+        line-height: 22px;
+      }
+
       margin-bottom: 20px;
       font-weight: 600;
       font-size: 32px;
@@ -135,6 +364,11 @@
     }
 
     &--text {
+      @include breakpoint($breakpoint-mobile) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
       font-size: 18px;
       line-height: 27px;
 
@@ -154,10 +388,18 @@
   }
 
   &__button {
+    @include breakpoint($breakpoint-notebook) {
+      width: 70%;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      width: 90%;
+      margin-bottom: 50px;
+    }
+
     display: flex;
     justify-content: center;
     width: 25%;
-    margin: 50px auto 0 auto;
+    margin: 50px auto 0;
     padding: 20px 50px;
     border-radius: 50px;
     background: rgba(92, 228, 145, 1);

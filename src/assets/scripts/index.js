@@ -8,4 +8,6 @@ import "./partials/header";
 
 import "./page/home";
 
+import "./page/consult";
+
 import "./utilities/form";
