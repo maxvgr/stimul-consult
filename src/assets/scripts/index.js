@@ -10,4 +10,6 @@ import "./page/home";
 
 import "./page/consult";
 
+import "./page/team";
+
 import "./utilities/form";

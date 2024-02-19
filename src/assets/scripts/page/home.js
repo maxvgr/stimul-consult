@@ -15,11 +15,11 @@ import {
 // import { breakpoint } from "../../global/settings";
 // import { Collapse } from "../../utils/collapse";
 
-export const hero = document.querySelector("#home-hero");
+// export const hero = document.querySelector("#home-hero");
 
 // const heroVideos = document.querySelectorAll("#home-hero video");
 
-new Swiper("#home-hero .swiper", {
+new Swiper("#home-page .swiper", {
   modules: [Navigation, Pagination, EffectFade, Autoplay],
 
   slidesPerView: 1,
@@ -48,15 +48,43 @@ new Swiper("#home-hero .swiper", {
   // },
 
   navigation: {
-    nextEl: "#home-hero .swiper .swiper-button-next",
-    prevEl: "#home-hero .swiper .swiper-button-prev",
+    nextEl: "#home-page .swiper .swiper-button-next",
+    prevEl: "#home-page .swiper .swiper-button-prev",
   },
 
   pagination: {
-    el: "#home-hero .swiper-pagination",
+    el: "#home-page .swiper-pagination",
     type: "bullets",
     clickable: true,
   },
 
 
+});
+
+
+new Swiper("#team-page .swiper", {
+  modules: [Navigation, Autoplay],
+
+  slidesPerView: 1,
+  spaceBetween: 0,
+
+  breakpoints: {
+    540: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+    1200: {
+      slidesPerView: 1,
+      spaceBetween: 0
+    }
+  },
+
+  navigation: {
+    nextEl: "#team-page .swiper .swiper-button-next",
+    prevEl: "#team-page .swiper .swiper-button-prev",
+  },
 });
