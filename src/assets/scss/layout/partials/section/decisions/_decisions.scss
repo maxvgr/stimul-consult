@@ -69,6 +69,12 @@
     // background-image: url("../assets/img/layout/section/decisions/03.jpg");
     // background-position: bottom right;
     // background-repeat: no-repeat;
+
+    .decisions__card-video {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
   }
 
   &__card-wrapper > :nth-child(4) {
@@ -111,6 +117,78 @@
     &-video {
       @include breakpoint($breakpoint-tabletmini) {
         height: 330px;
+      }
+
+      .video01 {
+        object-fit: cover;
+        width: 400px;
+        height: 100%;
+
+        &.mask {
+          -webkit-mask-image: url("../assets/img/layout/section/decisions/mask1.svg");
+          -webkit-mask-position: center center;
+          -webkit-mask-repeat: no-repeat;
+          -webkit-mask-size: cover;
+
+          mask-image: url("../assets/img/layout/section/decisions/mask1.svg");
+          mask-position: center center;
+          mask-repeat: no-repeat;
+          mask-size: cover;
+        }
+      }
+
+      .video02 {
+        object-fit: cover;
+        width: 250px;
+        height: 80%;
+
+        &.mask {
+          -webkit-mask-image: url("../assets/img/layout/section/decisions/mask2.svg");
+          -webkit-mask-position: center center;
+          -webkit-mask-repeat: no-repeat;
+          -webkit-mask-size: cover;
+
+          mask-image: url("../assets/img/layout/section/decisions/mask2.svg");
+          mask-position: center center;
+          mask-repeat: no-repeat;
+          mask-size: cover;
+        }
+      }
+
+      .video03 {
+        object-fit: cover;
+        width: 260px;
+        height: 70%;
+
+        &.mask {
+          -webkit-mask-image: url("../assets/img/layout/section/decisions/mask3.svg");
+          -webkit-mask-position: center center;
+          -webkit-mask-repeat: no-repeat;
+          -webkit-mask-size: cover;
+
+          mask-image: url("../assets/img/layout/section/decisions/mask3.svg");
+          mask-position: center center;
+          mask-repeat: no-repeat;
+          mask-size: cover;
+        }
+      }
+
+      .video04 {
+        object-fit: cover;
+        width: 400px;
+        height: 100%;
+
+        &.mask {
+          -webkit-mask-image: url("../assets/img/layout/section/decisions/mask4.svg");
+          -webkit-mask-position: center center;
+          -webkit-mask-repeat: no-repeat;
+          -webkit-mask-size: cover;
+
+          mask-image: url("../assets/img/layout/section/decisions/mask4.svg");
+          mask-position: center center;
+          mask-repeat: no-repeat;
+          mask-size: cover;
+        }
       }
 
       picture {

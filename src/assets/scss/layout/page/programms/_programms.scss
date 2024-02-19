@@ -161,17 +161,78 @@
       padding-bottom: 20px;
       padding-left: 20px;
 
-      picture {
-        width: 80%;
-      }
+      // picture {
+      //   width: 80%;
+      // }
     }
 
     display: flex;
+    height: 300px;
     justify-content: space-between;
     overflow: hidden;
     padding-left: 50px;
     border-radius: 30px;
     background-color: $palette-white;
+
+    &-video--wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .video01 {
+      object-fit: cover;
+      width: 230px;
+      height: 90%;
+
+      &.mask {
+        -webkit-mask-image: url("../assets/img/layout/page/programms/mask1.svg");
+        -webkit-mask-position: center center;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: cover;
+
+        mask-image: url("../assets/img/layout/page/programms/mask1.svg");
+        mask-position: center center;
+        mask-repeat: no-repeat;
+        mask-size: cover;
+      }
+    }
+
+    .video02 {
+      object-fit: cover;
+      width: 230px;
+      height: 90%;
+
+      &.mask {
+        -webkit-mask-image: url("../assets/img/layout/page/programms/mask2.svg");
+        -webkit-mask-position: center center;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: cover;
+
+        mask-image: url("../assets/img/layout/page/programms/mask2.svg");
+        mask-position: center center;
+        mask-repeat: no-repeat;
+        mask-size: cover;
+      }
+    }
+
+    .video03 {
+      object-fit: cover;
+      width: 260px;
+      height: 100%;
+
+      &.mask {
+        -webkit-mask-image: url("../assets/img/layout/page/programms/mask3.svg");
+        -webkit-mask-position: center center;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: cover;
+
+        mask-image: url("../assets/img/layout/page/programms/mask3.svg");
+        mask-position: center center;
+        mask-repeat: no-repeat;
+        mask-size: cover;
+      }
+    }
 
     &-title {
       @include breakpoint($breakpoint-mobile) {
