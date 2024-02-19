@@ -12,24 +12,27 @@
 
   &-title {
     @include breakpoint($breakpoint-laptop) {
+      margin-bottom: -45px;
       font-size: 70px;
       line-height: 78px;
     }
     @include breakpoint($breakpoint-notebook) {
+      margin-bottom: -35px;
       font-size: 62px;
       line-height: 68px;
     }
     @include breakpoint($breakpoint-tablet) {
-      margin-bottom: 60px;
+      margin-bottom: -15px;
       font-size: 76px;
       line-height: 83px;
     }
     @include breakpoint($breakpoint-mobile) {
-      margin-bottom: 70px;
+      // margin-bottom: 70px;
     }
 
     position: relative;
     z-index: 1;
+    margin-bottom: -50px;
     font-weight: $weight-SemiBold;
     font-size: $font-size__title--large;
     font-family: $font-second;
@@ -51,15 +54,21 @@
 
   &-img {
     @include breakpoint($breakpoint-laptop) {
-      margin-top: -170px;
+      min-height: 600px;
     }
     @include breakpoint($breakpoint-notebook) {
-      margin-top: -110px;
+      min-height: 400px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      min-height: 200px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      min-height: 150px;
     }
 
     position: relative;
+    min-height: 750px;
     z-index: 10;
-    margin-top: -218px;
   }
 
   &-info {
