@@ -12,3 +12,4 @@ export const lazyImageController = new LazyLoad({
 export const lazyBackgroundController = new LazyLoad({
   elements_selector: '.lazy-bg',
 });
+
