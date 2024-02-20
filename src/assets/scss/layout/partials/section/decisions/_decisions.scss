@@ -40,15 +40,19 @@
 
     grid-row: 1 / 2;
     grid-column: 1 / 4;
-    // background-image: url("../assets/img/layout/section/decisions/01.jpg");
-    // background-position: top right;
-    // background-repeat: no-repeat;
+
+    .decisions__card-video {
+      @include breakpoint($breakpoint-tabletmini) {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
   }
 
   &__card-wrapper > :nth-child(2) {
     @include breakpoint($breakpoint-laptop) {
-      grid-column: 1 / 2;
       grid-row: 2 / 3;
+      grid-column: 1 / 2;
     }
 
     grid-row: 1 / 2;
@@ -56,6 +60,13 @@
     // background-image: url("../assets/img/layout/section/decisions/02.jpg");
     // background-position: top right;
     // background-repeat: no-repeat;
+
+    .decisions__card-video {
+      @include breakpoint($breakpoint-tabletmini) {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
   }
 
   &__card-wrapper > :nth-child(3) {
@@ -73,21 +84,26 @@
     .decisions__card-video {
       display: flex;
       flex-direction: column;
+      align-items: flex-end;
       justify-content: flex-end;
     }
   }
 
   &__card-wrapper > :nth-child(4) {
     @include breakpoint($breakpoint-laptop) {
-      grid-column: 1 / 2;
       grid-row: 4 / 5;
+      grid-column: 1 / 2;
     }
 
     grid-row: 2 / 3;
     grid-column: 3 / 6;
-    // background-image: url("../assets/img/layout/section/decisions/04.jpg");
-    // background-position: bottom right;
-    // background-repeat: no-repeat;
+
+    .decisions__card-video {
+      @include breakpoint($breakpoint-tabletmini) {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
   }
 
   &__card {
@@ -119,6 +135,10 @@
         height: 330px;
       }
 
+      // &.right {
+
+      // }
+
       .video01 {
         object-fit: cover;
         width: 400px;
@@ -138,6 +158,11 @@
       }
 
       .video02 {
+        @include breakpoint($breakpoint-laptop) {
+          width: 350px;
+          height: 100%;
+        }
+
         object-fit: cover;
         width: 250px;
         height: 80%;
@@ -156,6 +181,11 @@
       }
 
       .video03 {
+        @include breakpoint($breakpoint-laptop) {
+          width: 375px;
+          height: 100%;
+        }
+
         object-fit: cover;
         width: 260px;
         height: 70%;
@@ -236,7 +266,9 @@
       margin-top: 40px;
       padding: 10px 10px 10px 50px;
       border-radius: 50px;
+
       // background: linear-gradient(135deg, #96e856 0%, #26e1c7 100%);
+
       background: rgba(92, 228, 145, 1);
       font-weight: $weight-Medium;
       font-size: 20px;
@@ -262,7 +294,9 @@
         height: 50px;
         border-radius: 50px;
         background-color: $palette-white;
+
         // background-image: url("../assets/img/layout/section/decisions/arrow.svg");
+
         background-image: url("data:image/svg+xml,%3Csvg width='17' height='12' viewBox='0 0 17 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 5.8814L11.7812 11.2594M1 5.8814H16H1ZM16 5.8814L11.7812 1L16 5.8814Z' stroke='%23363639' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
         background-position: center 50%;
         background-repeat: no-repeat;

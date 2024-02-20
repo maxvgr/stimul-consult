@@ -6,6 +6,8 @@ import "./common/init";
 
 import "./partials/header";
 
+import "./partials/footer";
+
 import "./page/home";
 
 import "./page/consult";
