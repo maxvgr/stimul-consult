@@ -17,4 +17,9 @@
 //   },
 // });
 
+// подключаем фэнсибокс на странице
+if (document.querySelector('#team-page')) {
 
+require("fslightbox");
+
+}

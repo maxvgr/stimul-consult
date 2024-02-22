@@ -18,9 +18,10 @@
       white-space: nowrap;
       transition: $transition-time ease;
 
+
+      // &.current-menu-item,
       &:hover {
         color: $palette-green;
-        // color: linear-gradient(135deg, #96e856 0%, #26e1c7 100%);
       }
     }
 

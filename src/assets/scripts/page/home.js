@@ -90,3 +90,9 @@ new Swiper("#team-page .swiper", {
 });
 
 
+if (document.querySelector('#home-page')) {
+
+  require("fslightbox");
+
+  }
+
