@@ -19,6 +19,14 @@ const headerHeight = SetSize(header, "header", true);
 //   })
 // }
 
+const hamburger = document.getElementsByClassName("hamburger--spin")[0]
+const mobileNavs = document.getElementsByClassName("header__left-menu")[0]
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("is-active")
+  mobileNavs.classList.toggle("is-active")
+})
+
 
 
 
