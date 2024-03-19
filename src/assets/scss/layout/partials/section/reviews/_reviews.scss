@@ -4,7 +4,7 @@
       grid-template-columns: 1fr;
     }
     @include breakpoint($breakpoint-mobile) {
-      margin-bottom: -80px;
+      // margin-bottom: -80px;
     }
 
     display: grid;
@@ -24,6 +24,18 @@
     line-height: 53px;
     letter-spacing: 0.02em;
     text-transform: uppercase;
+
+    h2 {
+      @include breakpoint($breakpoint-mobile) {
+        font-size: 26px;
+        line-height: 28px;
+      }
+
+      font-weight: $weight-Bold;
+      font-size: $font-size__title--medium;
+      font-family: $font-second;
+      line-height: 53px;
+    }
 
     span {
       font-weight: $weight-Regular;
@@ -69,6 +81,9 @@
     @include breakpoint($breakpoint-tablet) {
       transform: scale(0.8);
     }
+    @include breakpoint($breakpoint-mobile) {
+      // transform: scale(1);
+    }
 
     .reviewall {
       @include breakpoint($breakpoint-mobile) {
@@ -83,13 +98,19 @@
   }
 
   &__card-wrap {
+    @include breakpoint($breakpoint-mobile) {
+      gap: 0;
+    }
+
     display: flex;
     gap: 20px;
   }
 
   &__card {
     @include breakpoint($breakpoint-mobile) {
-      width: 328px !important;
+      // width: 328px !important;
+
+      width: 100% !important;
       height: auto;
       background-image: url("../assets/img/layout/section/reviews/bg-mobile.png");
       background-position: top;
@@ -145,10 +166,11 @@
           width: 100%;
         }
 
+        overflow: hidden;
         width: 50%;
 
         .title {
-          padding-top: 50px;
+          padding-top: 35px;
           padding-bottom: 20px;
           font-weight: $weight-Bold;
           font-size: 32px;

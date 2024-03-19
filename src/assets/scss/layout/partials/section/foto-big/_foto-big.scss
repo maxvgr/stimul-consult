@@ -41,6 +41,25 @@
     text-align: left;
     text-transform: uppercase;
 
+    h1 {
+      @include breakpoint($breakpoint-laptop) {
+        font-size: 70px;
+        line-height: 78px;
+      }
+      @include breakpoint($breakpoint-notebook) {
+        font-size: 62px;
+        line-height: 68px;
+      }
+      @include breakpoint($breakpoint-tablet) {
+        font-size: 76px;
+        line-height: 83px;
+      }
+
+      font-weight: $weight-SemiBold;
+      font-size: $font-size__title--large;
+      font-family: $font-second;
+    }
+
     span {
       @include breakpoint($breakpoint-tablet) {
         display: block;

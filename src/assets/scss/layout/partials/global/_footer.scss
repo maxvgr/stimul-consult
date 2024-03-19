@@ -7,7 +7,21 @@
     max-width: 100%;
     padding: 0;
   }
+
+  .popmake-content {
+    ul {
+      margin-left: 20px;
+      color: $palette-green;
+      list-style: disc;
+
+      span {
+        color: $color-text__primary;
+        font-weight: 400;
+      }
+    }
+  }
 }
+
 
 .footer {
   @include breakpoint($breakpoint-notebook) {
@@ -16,7 +30,7 @@
     padding: 50px 20px 90px;
   }
   @include breakpoint($breakpoint-tablet) {
-    margin-top: 0px;
+    margin-top: 0;
   }
   @include breakpoint($breakpoint-mobile) {
     padding: 50px 20px 40px;
@@ -24,6 +38,7 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-self: start;
   margin-top: 130px;
   padding: 90px 172px 90px 150px;
   border-radius: 50px 50px 0 0;
@@ -33,9 +48,6 @@
   background-position: bottom left, top right;
   background-repeat: no-repeat, no-repeat;
   color: $color-text__white;
-
-  // $color-text__primary;
-  justify-self: start;
 
   &__left {
     @include breakpoint($breakpoint-notebook) {
@@ -228,6 +240,7 @@
               margin: 0 auto;
             }
 
+            width: 200px;
             border: none;
             color: $palette-togrey;
             font-weight: $weight-Regular;

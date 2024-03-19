@@ -24,10 +24,14 @@ new Swiper("#home-page .swiper", {
 
   slidesPerView: 1,
   spaceBetween: 0,
-  loop: true,
+  loop: false,
 
   breakpoints: {
 
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 0
+    },
     1400: {
       slidesPerView: 2,
       spaceBetween: 0
@@ -63,10 +67,11 @@ new Swiper("#home-page .swiper", {
 
 
 new Swiper("#team-page .swiper", {
-  modules: [Navigation, Autoplay],
+  modules: [Navigation],
 
   slidesPerView: 1,
-  spaceBetween: 0,
+  spaceBetween: 10,
+  // centeredSlides: true,
 
   breakpoints: {
     540: {
@@ -79,13 +84,13 @@ new Swiper("#team-page .swiper", {
     },
     1200: {
       slidesPerView: 1,
-      spaceBetween: 0
+      spaceBetween: 10
     }
   },
 
   navigation: {
-    nextEl: "#team-page .swiper .swiper-button-next",
-    prevEl: "#team-page .swiper .swiper-button-prev",
+    nextEl: "#team-page .swiper-button-next",
+    prevEl: "#team-page .swiper-button-prev",
   },
 });
 

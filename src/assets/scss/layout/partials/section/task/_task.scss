@@ -42,6 +42,18 @@
       letter-spacing: 0.02em;
       text-transform: uppercase;
 
+      h2 {
+        @include breakpoint($breakpoint-mobile) {
+          font-size: 26px;
+          line-height: 28px;
+        }
+
+        font-weight: $weight-Regular;
+        font-size: $font-size__title--medium;
+        font-family: $font-second;
+        line-height: 53px;
+      }
+
       span {
         font-weight: $weight-Bold;
       }
